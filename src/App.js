@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import ListOfGifs from "./components/ListOfGifs";
 
-import {Route} from "wouter";
+import {Link, Route} from "wouter";
 
 function App() {
 const [keyword, setKeyword] = useState('panda')
@@ -11,6 +11,7 @@ const [keyword, setKeyword] = useState('panda')
     <div className="App">
         <section className="App-content">
             <h1>Giffy</h1>
+            <Link to='/gif/argentina' >Gifs de Argentina</Link>
             <Route component={ListOfGifs}
                    path="/gif/:keyword"/>
 
